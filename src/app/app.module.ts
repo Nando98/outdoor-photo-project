@@ -1,26 +1,32 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
-import { HomeComponent } from './components/home/home.component';
-import { PortafolioComponent } from './components/portafolio/portafolio.component';
-import { ContactComponent } from './components/contact/contact.component';
-import { NavbarComponent } from './shared/components/navbar/navbar.component';
-import { FooterComponent } from './shared/components/footer/footer.component';
+import {AppRoutingModule} from './app.routes';
+
+import {AppComponent} from './app.component';
+import {HomeComponent} from './components/home/home.component';
+import {ContactComponent} from './components/contact/contact.component';
+import {NavbarComponent} from './shared/components/navbar/navbar.component';
+import {FooterComponent} from './shared/components/footer/footer.component';
+import {PortfolioComponent} from './components/portfolio/portfolio.component';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    PortafolioComponent,
-    ContactComponent,
-    NavbarComponent,
-    FooterComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HomeComponent,
+        ContactComponent,
+        NavbarComponent,
+        FooterComponent,
+        PortfolioComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        RouterModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
